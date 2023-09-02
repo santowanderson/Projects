@@ -15,7 +15,7 @@
 
   <main>
 
-    <!-- <section class="subscription-container">
+    <section class="subscription-container" data-subscribe-container>
 
       <figure class="image-container">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Mobile ilustration sign up">
@@ -33,24 +33,24 @@
           <li class="updates-item"><img src="./assets/images/icon-list.svg" alt="Icon list">And much more!</li>
         </ul>
   
-        <form class="subscribe-container">
+        <form class="subscribe-container" data-form>
   
           <label>Email address</label>
-          <input type="email" placeholder="email@company.com" required>
+          <input type="email" placeholder="email@company.com" required data-subscribe-input>
           <span class="error-message">Valid email required</span>
   
-          <button type="submit" class="subscribe-button">Subscribe to monthly newsletter</button>
+          <button type="submit" class="subscribe-button" data-subscribe-button>Subscribe to monthly newsletter</button>
   
         </form>
   
       </section>
 
-    </section> -->
+    </section>
 
     
     <!-- Success submit page content -->
 
-    <section class="subscribed-container">
+    <section class="subscribed-container" data-subscribed-container>
 
       <div class="subscribed-content">
 
@@ -63,13 +63,13 @@
         </h1>
   
         <p class="subscribe-info">
-          A confirmation email has been sent to <span>ash@leremcompany.com</span>. Please open it 
+          A confirmation email has been sent to <span data-subscribed-email></span>. Please open it 
           and click the button inside to confirm your subscription.
         </p>
 
       </div>
 
-      <button class="home-page-button">Dimiss message</button>
+      <button class="home-page-button" data-home-page-button>Dimiss message</button>
 
     </section>
 

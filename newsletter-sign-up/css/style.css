@@ -146,7 +146,7 @@ input, button {
 
 .subscribed-container {
     padding: 0 20px;
-    border: 1px solid red;
+    display: none;
 }
 
 .subscribed-content {
