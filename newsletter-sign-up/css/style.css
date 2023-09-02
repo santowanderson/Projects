@@ -19,6 +19,7 @@ input, button {
     border: none;
     outline: none;
     background-color: transparent;
+    display: block;
 }
 
 /*************************************************
@@ -31,4 +32,71 @@ input, button {
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
+}
+
+/*************************************************
+    Style page
+**************************************************/
+
+.image-container img { width: 100%; }
+
+.content-container{ padding: 0 15px; }
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-slate-grey);
+    margin: 25px 0 15px 0;
+}
+
+.page-description {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark-slate-grey);
+}
+
+.updates-list{ margin-bottom: 25px; }
+
+.updates-item {
+    list-style-type: none;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--charcoal-grey);
+    font-weight: 400;
+}
+
+.updates-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.subscribe-container { margin-bottom: 35px; }
+
+.subscribe-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--charcoal-grey);
+    font-size: .6rem;
+}
+
+.subscribe-container input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+::placeholder { color: var(--grey); }
+
+.subscribe-button {
+    width: 100%;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 7px;
+    text-align: center;
 }
