@@ -32,10 +32,17 @@ input, button {
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
+
+
+    --bg-gradient-1: linear-gradient(100deg, hsl(347, 100%, 66%), hsl(6, 100%, 66%));
+
+
+    --shadow-1: 0px 9px 30px 0px rgba(255, 98, 87, 0.5);
 }
 
+
 /*************************************************
-    Style page
+    Subscribe page style
 **************************************************/
 
 .image-container img { width: 100%; }
@@ -72,7 +79,10 @@ input, button {
     margin-right: 10px;
 }
 
-.subscribe-container { margin-bottom: 35px; }
+.subscribe-container {
+    position: relative;
+    margin-bottom: 35px;
+}
 
 .subscribe-container label {
     display: block;
@@ -92,11 +102,84 @@ input, button {
 
 ::placeholder { color: var(--grey); }
 
+.subscribe-container input:focus:invalid {
+    border: 1px solid var(--tomato);
+    background-color: rgba(255, 98, 87, 0.2);
+}
+
+.subscribe-container input:focus:invalid::placeholder { color: var(--tomato); }
+
+.error-message {
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    color: var(--tomato);
+    font-size: .6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subscribe-container input:focus:invalid + .error-message {
+    visibility: visible;
+}
+
 .subscribe-button {
     width: 100%;
     background-color: var(--dark-slate-grey);
     color: var(--white);
+    font-weight: 700;
     padding: 15px;
     border-radius: 7px;
     text-align: center;
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background: var(--bg-gradient-1);
+    box-shadow: var(--shadow-1);
+}
+
+/*************************************************
+    Subscribed page style
+**************************************************/
+
+.subscribed-container { padding: 0 20px; }
+
+.subscribed-content {
+    position: relative;
+    height: 100vh;
+    margin-top: 160px
+}
+
+.subscribe-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-slate-grey);
+    margin: 30px 0 20px 0;
+}
+
+.subscribe-info {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dark-slate-grey);
+}
+
+.subscribe-info span { font-weight: 700; }
+
+.home-page-button {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.home-page-button:hover {
+    background: var(--bg-gradient-1);
+    box-shadow: var(--shadow-1);
 }
