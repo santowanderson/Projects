@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap');
+
+/*************************************************
+    Style resets
+**************************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: Roboto, sans-serif;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/*************************************************
+    Variables
+**************************************************/
+
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
