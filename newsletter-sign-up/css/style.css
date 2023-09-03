@@ -145,12 +145,15 @@ input, button {
 **************************************************/
 
 .subscribed-container {
+    position: relative;
     padding: 0 20px;
     display: none;
 }
 
 .subscribed-content {
-    margin-top: 160px;
+    position: relative;
+    height: 100vh;
+    padding-top: 140px;
 }
 
 .subscribe-title {
@@ -169,12 +172,13 @@ input, button {
 .subscribe-info span { font-weight: 700; }
 
 .home-page-button {
+    position: absolute;
     width: 100%;
+    bottom: 30px;
     color: var(--white);
     background-color: var(--dark-slate-grey);
     font-weight: 700;
     padding: 15px;
-    margin-top: 250px;
     border-radius: 7px;
     cursor: pointer;
 }
@@ -183,3 +187,4 @@ input, button {
     background: var(--bg-gradient-1);
     box-shadow: var(--shadow-1);
 }
+
