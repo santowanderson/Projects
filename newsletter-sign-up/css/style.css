@@ -45,6 +45,11 @@ input, button {
     Subscribe page style
 **************************************************/
 
+main {
+    min-width: 375px;
+    height: 100vh;
+}
+
 .image-container img { width: 100%; }
 
 .content-container{ padding: 0 15px; }
@@ -79,9 +84,9 @@ input, button {
     margin-right: 10px;
 }
 
-.subscribe-container {
-    position: relative;
-    margin-bottom: 35px;
+.discription-box {
+    display: flex;
+    flex-direction: row;
 }
 
 .subscribe-container label {
@@ -90,6 +95,15 @@ input, button {
     font-weight: 700;
     color: var(--charcoal-grey);
     font-size: .6rem;
+}
+
+.error-message {
+    margin-left: auto;
+    visibility: hidden;
+    color: var(--tomato);
+    font-size: .6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .subscribe-container input {
@@ -108,21 +122,6 @@ input, button {
 }
 
 .subscribe-container input:focus:invalid::placeholder { color: var(--tomato); }
-
-.error-message {
-    position: absolute;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-    color: var(--tomato);
-    font-size: .6rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.subscribe-container input:focus:invalid + .error-message {
-    visibility: visible;
-}
 
 .subscribe-button {
     width: 100%;
@@ -188,3 +187,14 @@ input, button {
     box-shadow: var(--shadow-1);
 }
 
+/*************************************************
+    Media query min width 768 style
+**************************************************/
+
+@media screen and (min-width: 768px) {
+    
+    main{
+        background-color: red;
+    }
+    
+}

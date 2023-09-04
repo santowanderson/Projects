@@ -10,6 +10,16 @@ const subscribeButton = document.querySelector('[data-subscribe-button]');
 const subscribedContainer = document.querySelector('[data-subscribed-container]');
 const homePageButton = document.querySelector('[data-home-page-button]');
 
+function invalidInputMessage() {
+    const errorMessage = document.querySelector('.error-message');
+
+    if (input.checkValidity) {
+        errorMessage.style.visibility = 'visible';
+    } else {
+        
+    }
+}
+
 
 function sendSubsciptionForm(element) {
 
