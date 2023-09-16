@@ -114,6 +114,7 @@ main { min-width: 375px; }
     border-radius: 9px;
     background-color: var(--dark-slate-grey);
     color: var(--white);
+    font-weight: 700;
     margin-top: 20px;
     cursor: pointer;
 }
@@ -135,9 +136,7 @@ main { min-width: 375px; }
     width: 100%;
 }
 
-.subscribed-content {
-    margin-top: 120px;
-}
+.subscribed-content { margin-top: 100px; }
 
 .subscribe-title {
     font-size: 2rem;
@@ -171,3 +170,4 @@ main { min-width: 375px; }
     background: var(--bg-gradient-1);
     box-shadow: var(--shadow-1);
 }
+
