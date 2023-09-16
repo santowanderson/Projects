@@ -79,7 +79,7 @@ main { min-width: 375px; }
 
 .updates-item:not(:last-of-type) { margin-bottom: 10px; }
 
-.subscribe-container { margin-bottom: 20px; }
+.subscribe-container { margin-bottom: 10px; }
 
 .description-box label {
     font-weight: 700;
