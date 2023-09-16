@@ -8,6 +8,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 body {
@@ -45,76 +47,59 @@ input, button {
     Subscribe page style
 **************************************************/
 
-main {
-    min-width: 375px;
-    height: 100vh;
-}
+main { min-width: 375px; }
 
 .image-container img { width: 100%; }
 
-.content-container{ padding: 0 15px; }
+.content-container { padding: 15px; }
 
 .title {
     font-size: 2rem;
     font-weight: 700;
     color: var(--dark-slate-grey);
-    margin: 25px 0 15px 0;
+    margin: 15px 0;
 }
 
 .page-description {
-    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--charcoal-grey);
+}
+
+.updates-list { margin: 20px 0 35px 0; }
+
+.updates-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1rem;
     font-weight: 400;
     color: var(--dark-slate-grey);
 }
 
-.updates-list{ margin-bottom: 25px; }
+.updates-item:not(:last-of-type) { margin-bottom: 10px; }
 
-.updates-item {
-    list-style-type: none;
-    padding: 10px 0;
-    font-size: 1rem;
-    color: var(--charcoal-grey);
-    font-weight: 400;
-}
+.subscribe-container { margin-bottom: 20px; }
 
-.updates-item img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.discription-box {
-    display: flex;
-    flex-direction: row;
-}
-
-.subscribe-container label {
+.description-box label {
+    font-weight: 700;
+    color: var(--dark-slate-grey);
+    font-size: .7rem;
     display: block;
-    margin-bottom: 5px;
-    font-weight: 700;
-    color: var(--charcoal-grey);
-    font-size: .6rem;
-}
-
-.error-message {
-    margin-left: auto;
-    visibility: hidden;
-    color: var(--tomato);
-    font-size: .6rem;
-    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .subscribe-container input {
     width: 100%;
-    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 7px;
-    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 9px;
 }
 
-::placeholder { color: var(--grey); }
+::placeholder {
+    font-size: .8rem;
+    color: var(--grey);
+}
 
 .subscribe-container input:focus:invalid {
     border: 1px solid var(--tomato);
@@ -125,12 +110,11 @@ main {
 
 .subscribe-button {
     width: 100%;
+    padding: 15px;
+    border-radius: 9px;
     background-color: var(--dark-slate-grey);
     color: var(--white);
-    font-weight: 700;
-    padding: 15px;
-    border-radius: 7px;
-    text-align: center;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -140,19 +124,19 @@ main {
 }
 
 /*************************************************
-    Subscribed page style
+    Success subscribe page
 **************************************************/
 
 .subscribed-container {
-    position: relative;
-    padding: 0 20px;
     display: none;
+    position: relative;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
 }
 
 .subscribed-content {
-    position: relative;
-    height: 100vh;
-    padding-top: 140px;
+    margin-top: 120px;
 }
 
 .subscribe-title {
@@ -172,8 +156,9 @@ main {
 
 .home-page-button {
     position: absolute;
-    width: 100%;
-    bottom: 30px;
+    bottom: 35px;
+    left: 20px;
+    right: 20px;
     color: var(--white);
     background-color: var(--dark-slate-grey);
     font-weight: 700;
@@ -185,16 +170,4 @@ main {
 .home-page-button:hover {
     background: var(--bg-gradient-1);
     box-shadow: var(--shadow-1);
-}
-
-/*************************************************
-    Media query min width 768 style
-**************************************************/
-
-@media screen and (min-width: 768px) {
-    
-    main{
-        background-color: red;
-    }
-    
 }
