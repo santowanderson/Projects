@@ -1,50 +1,25 @@
 'use strict';
 
-//subscribe page variables
-const subscribeContainer = document.querySelector('[data-subscribe-container]');
+const subscriptionPage = document.querySelector('.subscription-container');
+const successSubscriptionPage = document.querySelector('.subscribed-container');
 const form = document.querySelector('[data-form]');
-const input = document.querySelector('[data-subscribe-input]');
-const subscribeButton = document.querySelector('[data-subscribe-button]');
+const dismissButton = document.querySelector('.home-page-button');
 
-//subiscribed success page variables
-const subscribedContainer = document.querySelector('[data-subscribed-container]');
-const homePageButton = document.querySelector('[data-home-page-button]');
 
-function invalidInputMessage() {
-    const errorMessage = document.querySelector('.error-message');
-
-    if (input.checkValidity) {
-        errorMessage.style.visibility = 'visible';
-    } else {
-        
-    }
+function switchPage() {
+    subscriptionPage.classList.toggle('hidden');
+    successSubscriptionPage.classList.toggle('hidden');
 }
 
+form.addEventListener('submit', function(element) {
+    element.preventDefault();
 
-function sendSubsciptionForm(element) {
+    switchPage();
+})
 
-    element.preventDefault()
+dismissButton.addEventListener('click', function() {
+    const input = document.querySelector('.subscribe-input');
 
-    if (form.checkValidity) {
-        subscribeContainer.style.display = 'none';
-        subscribedContainer.style.display = 'block';
-
-        getInputValue();
-    }
-}
-
-function backToHomePage() {
-
-    subscribeContainer.style.display = 'block';
-    subscribedContainer.style.display = 'none';
     input.value = '';
-}
-
-function getInputValue() {
-    const subscribedEmailInfo = document.querySelector('[data-subscribed-email]');
-
-    subscribedEmailInfo.innerHTML += input.value;
-}
-
-form.addEventListener('submit', sendSubsciptionForm);
-homePageButton.addEventListener('click', backToHomePage);
+    switchPage();
+})

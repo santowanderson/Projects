@@ -49,12 +49,16 @@ input, button {
 
 main { min-width: 375px; }
 
-.image-container img { width: 100%; }
+.subscription-container { background-color: var(--white); }
+
+.mobile-img { width: 100%; }
+
+.desktop-img { display: none; }
 
 .content-container { padding: 15px; }
 
 .title {
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: var(--dark-slate-grey);
     margin: 15px 0;
@@ -81,15 +85,28 @@ main { min-width: 375px; }
 
 .subscribe-container { margin-bottom: 10px; }
 
+.description-box {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
 .description-box label {
     font-weight: 700;
     color: var(--dark-slate-grey);
     font-size: .7rem;
     display: block;
-    margin-bottom: 5px;
 }
 
-.subscribe-container input {
+.error-message {
+    font-weight: 700;
+    font-size: .7rem;
+    color: var(--tomato);
+    margin-left: auto;
+    visibility: hidden;
+}
+
+.subscribe-input {
     width: 100%;
     border: 1px solid #ccc;
     padding: 15px;
@@ -101,12 +118,12 @@ main { min-width: 375px; }
     color: var(--grey);
 }
 
-.subscribe-container input:focus:invalid {
+.subscribe-input:focus:invalid {
     border: 1px solid var(--tomato);
     background-color: rgba(255, 98, 87, 0.2);
 }
 
-.subscribe-container input:focus:invalid::placeholder { color: var(--tomato); }
+.subscribe-input:focus:invalid::placeholder { color: var(--tomato); }
 
 .subscribe-button {
     width: 100%;
@@ -115,7 +132,7 @@ main { min-width: 375px; }
     background-color: var(--dark-slate-grey);
     color: var(--white);
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 25px;
     cursor: pointer;
 }
 
@@ -124,16 +141,18 @@ main { min-width: 375px; }
     box-shadow: var(--shadow-1);
 }
 
+.hidden { display: none !important; }
+
 /*************************************************
-    Success subscribe page
+    Success subscription page
 **************************************************/
 
 .subscribed-container {
-    display: none;
     position: relative;
     padding: 20px;
     height: 100vh;
     width: 100%;
+    background-color: var(--white);
 }
 
 .subscribed-content { margin-top: 100px; }
@@ -171,3 +190,76 @@ main { min-width: 375px; }
     box-shadow: var(--shadow-1);
 }
 
+
+/*************************************************
+    Responsive page style
+**************************************************/
+
+@media (min-width: 764px) {
+
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--charcoal-grey);
+    }
+
+    .subscription-container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 15px;
+        max-height: 500px;
+        
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .image-container {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .mobile-img { display: none; }
+
+    .desktop-img {
+        display: block;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .title { font-size: 3rem; }
+
+    .page-description, .updates-item { font-size: .8rem; }
+
+    /*************************************************
+        Subscribed page style
+    **************************************************/
+
+    .subscribed-container {
+        max-width: 400px;
+        max-height: 400px;
+        border-radius: 20px;
+        padding: 40px;
+    }
+
+    .subscribed-content { margin-top: auto; }
+
+    .subscribe-title { font-size: 2.5rem; }
+
+    .subscribe-info { font-size: .8rem; }
+
+    .home-page-button {
+        left: 40px;
+        right: 40px;
+    }
+}
