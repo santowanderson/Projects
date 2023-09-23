@@ -81,30 +81,34 @@ main { min-width: 375px; }
     color: var(--dark-slate-grey);
 }
 
-.updates-item:not(:last-of-type) { margin-bottom: 10px; }
+.updates-item:not(:last-of-type) { margin-bottom: 15px; }
 
-.subscribe-container { margin-bottom: 10px; }
-
-.description-box {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
+.form-wrapper {
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.description-box label {
+label {
+    display: inline-block;
     font-weight: 700;
     color: var(--dark-slate-grey);
     font-size: .7rem;
-    display: block;
+    margin-bottom: 5px;
 }
 
 .error-message {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+    color: var(--tomato);
     font-weight: 700;
     font-size: .7rem;
-    color: var(--tomato);
-    margin-left: auto;
     visibility: hidden;
 }
+
+.subscribe-input:focus:invalid + .error-message { visibility: visible; }
+
 
 .subscribe-input {
     width: 100%;
@@ -198,48 +202,35 @@ main { min-width: 375px; }
 @media (min-width: 764px) {
 
     main {
-        height: 100vh;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         background-color: var(--charcoal-grey);
+        height: 100vh;
     }
 
     .subscription-container {
         display: flex;
         flex-direction: row-reverse;
-        gap: 30px;
+        gap: 20px;
         border-radius: 20px;
         overflow: hidden;
-        padding: 15px;
-        max-height: 500px;
-        
-    }
-
-    .content-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 10px;
-    }
-
-    .image-container {
-        border-radius: 10px;
-        overflow: hidden;
+        height: 500px;
+        padding: 20px;
     }
 
     .mobile-img { display: none; }
 
     .desktop-img {
         display: block;
-        object-fit: cover;
         height: 100%;
-        width: 100%;
     }
 
-    .title { font-size: 3rem; }
+    .title { font-size: 2.5rem; }
 
-    .page-description, .updates-item { font-size: .8rem; }
+    .page-description, .updates-item { font-size: 0.9rem; }
+
+    
 
     /*************************************************
         Subscribed page style
@@ -249,7 +240,7 @@ main { min-width: 375px; }
         max-width: 400px;
         max-height: 400px;
         border-radius: 20px;
-        padding: 40px;
+        padding: 30px 50px 40px 50px;
     }
 
     .subscribed-content { margin-top: auto; }
@@ -259,7 +250,8 @@ main { min-width: 375px; }
     .subscribe-info { font-size: .8rem; }
 
     .home-page-button {
-        left: 40px;
-        right: 40px;
+        position: static;
+        width: 100%;
+        margin: 25px 0;
     }
 }
